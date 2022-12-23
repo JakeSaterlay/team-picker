@@ -24,6 +24,9 @@ const TeamViewer = () => {
 			</select>
 
 			<div className="h-full flex flex-col justify-center">
+				<div className="flex flex-row justify-center">
+					<div className="h-24 w-24 bg-white m-10"></div>
+				</div>
 				{formation.split("-").map((row, index) => (
 					<div className="flex flex-row justify-center" key={index}>
 						{Array(parseInt(row))
