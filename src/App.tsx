@@ -4,11 +4,11 @@ import "./App.css";
 import TeamViewer from "./components/TeamViewer";
 
 function App() {
-	return (
-		<div className="App h-screen bg-green-600">
-			<TeamViewer />
-		</div>
-	);
+  return (
+    <div className="App h-screen bg-green-700">
+      <TeamViewer />
+    </div>
+  );
 }
 
 export default App;
