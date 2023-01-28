@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import PlayerList from "./PlayerList";
 
 const TeamViewer = () => {
 	const [formation, setFormation] = useState("4-4-2");
@@ -8,7 +10,6 @@ const TeamViewer = () => {
 	) => {
 		setFormation(event.target.value);
 	};
-
 	return (
 		<React.Fragment>
 			<select
@@ -23,7 +24,7 @@ const TeamViewer = () => {
 				<option value="5-3-2">5-3-2</option>
 			</select>
 
-			<div className="h-full flex flex-col justify-center">
+			<div className="flex flex-col justify-center">
 				<div className="flex flex-row justify-center">
 					<div className="h-24 w-24 bg-white m-10"></div>
 				</div>
@@ -36,6 +37,7 @@ const TeamViewer = () => {
 							))}
 					</div>
 				))}
+				<PlayerList />
 			</div>
 		</React.Fragment>
 	);
